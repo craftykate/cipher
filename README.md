@@ -35,6 +35,14 @@ Gwvh gw o hsfqsg srcq!
 
 To turn "Gwvh gw o hsfqsg srcq!" back into English go through the program again but enter number 2 to decode. 
 
+## How to use
+
+- Download `cipher.rb` to the folder of your choice
+
+- Navigate your terminal window to that folder and type in `ruby cipher.rb`.
+
+- Follow the instruction in your terminal window!
+
 ## How it works
 
 - It takes each letter and shifts it forward by the number given (in our case above, 14). 
