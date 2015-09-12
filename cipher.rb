@@ -1,5 +1,17 @@
 class Cipher
 
+	def numpick
+		puts "Pick a number 1-25"
+		loop do
+			num = gets.chomp.to_i
+			if num.between?(1, 25)
+				return num
+			else
+				puts "Oops, invalid option."
+			end
+		end
+	end
+	
 	def initialize
 		loop do
 			puts
@@ -12,33 +24,15 @@ class Cipher
 					puts
 					puts "What is the phrase you'd like to encode?"
 					phrase = gets.chomp
-					loop do
-						puts "Pick a number 1-25"
-						num = gets.chomp.to_i
-						if num.between?(1, 25)
-							encode(phrase, num)
-							break
-						else 
-							puts "Oops, invalid option."
-							next
-						end
-					end
+					num = numpick
+					encode(phrase,num)
 					break
 				when '2'
 					puts
 					puts "What is the phrase you'd like to decode?"
 					phrase = gets.chomp
-					loop do
-						puts "Pick a number 1-25"
-						num = gets.chomp.to_i
-						if num.between?(1, 25)
-							decode(phrase, num)
-							break
-						else 
-							puts "Oops, invalid option."
-							next
-						end
-					end
+					num = numpick
+					decode(phrase,num)
 					break
 				else
 					puts "Oops, invalid option. Try again."
